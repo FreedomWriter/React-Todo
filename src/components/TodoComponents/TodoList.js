@@ -2,12 +2,12 @@ import React from "react";
 import Todo from "./Todo";
 
 const TodoList = props => {
-  let test = JSON.parse(localStorage.getItem("tasks"));
+  let localTasks = JSON.parse(localStorage.getItem("tasks"));
 
   return (
     <div className="list">
-      {test &&
-        test.map(item => {
+      {localTasks &&
+        localTasks.map(item => {
           return (
             <Todo
               key={item.id}
